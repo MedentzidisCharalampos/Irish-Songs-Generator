@@ -29,7 +29,15 @@ Input Sequences
  [0 4 2 66 8 67 68 69]  
  [4 2 66 8 67 68 69 70]  
  
- The next thing is to turn sequencies into x's and y's, the input values and their labels. All but the last character is the x and the last characted is the y
+ The next thing is to turn sequencies into x's and y's, the input values and their labels. All but the last character is the x and the last characted is the y. Then the labels will be one-hot encoded as this is a classification problem.  
+ 
+ The architecture of our model is as follows:  
+ 1. An Embedding Layer thats embeds the total of words in the dimension 64  
+ 2. A Long Short Term Memort Biderectional Layer with 20-units  
+ 3. A Dense Layer for the total number of words and Softmax activation function  
+ 
+ The model is compiled with categoricalCrossentropy as loss function and Adam as optizer.  
+ The model is trained for 500 epochs because there is not a lot of data.  
 
 
 
