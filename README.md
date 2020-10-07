@@ -5,7 +5,7 @@ The dictionary of words is created from corpus using the tokenizer, this is a ke
 
 For each line in the corpus we generate a token list using the tokenizers, this will convert a line of text like "In the town of Athy one Jeremy Lanigan" into a list of the tokens [4 2 66 8 67 68 69 70] representing the words.    
 We iterate over the list of tokens and create a number of n-grams sequences.  
-Line                          Input Sequences  
+Line    \t                    Input Sequences  
 [4 2 66 8 67 68 69 70]        [4 2 ]          
                               [4 2 66]   
                               [4 2 66 8]          
