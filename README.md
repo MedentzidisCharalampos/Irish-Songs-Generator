@@ -8,13 +8,28 @@ We iterate over the list of tokens and create a number of n-grams sequences.
 Line                       
  [4 2 66 8 67 68 69 70]          
 Input Sequences    
- [4 2 ]                                                     
+ [4 2]                                                     
  [4 2 66]   
  [4 2 66 8]          
  [4 2 66 8 67]          
  [4 2 66 8 67 68]  
  [4 2 66 8 67 68 69]  
- [4 2 66 8 67 68 69 70]          
+ [4 2 66 8 67 68 69 70]       
+ 
+ The input sequences are simply the sentences being broken down into phrases the first two words, the first three words e.t.c.  
+ We find the length of the longest sentence in the corpus and pad all of the sequences so that they are the same length.  
+ We pre-pad with zeros so that it is easier to extract the label.  
+ 
+ Input Paddded Sequences    
+ [0 0 0 0 0 0 0 4 2]                                                     
+ [0 0 0 0 0 0 4 2 66]   
+ [0 0 0 0 0 4 2 66 8]          
+ [0 0 0 0 4 2 66 8 67]          
+ [0 0 4 2 66 8 67 68]  
+ [0 4 2 66 8 67 68 69]  
+ [4 2 66 8 67 68 69 70]  
+ 
+ The next thing is to turn sequencies into x's and y's, the input values and their labels. All but the last character is the x and the last characted is the y
 
 
 
